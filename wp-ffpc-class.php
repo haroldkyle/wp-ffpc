@@ -229,7 +229,7 @@ class WP_FFPC extends PluginAbstract {
 
 		/* look for acache file */
 		if ( ! file_exists ( $this->acache ) )
-			$this->errors['no_acache_saved'] = sprintf (__('Advanced cache file is yet to be generated, please save <a href="%s">WP-FFPC settings!</a>', $this->plugin_constant), $settings_link );
+			$this->errors['no_acache_saved'] = sprintf (__('Advanced cache file is yet to be generated, please save %s', $this->plugin_constant), $settings_link );
 
 		/* look for extensions that should be available */
 		foreach ( $this->valid_cache_type as $backend => $status ) {
